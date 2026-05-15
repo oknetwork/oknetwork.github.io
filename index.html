@@ -9,22 +9,31 @@
 		<meta name="keywords" content="AI consulting, Cybersecurity Strategy, DevSecOps, Cloud Compliance, IT Operations" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <style>
-            /* Custom utility classes to force perfect centering in the quadrants */
-            .centered-quadrant {
+            /* Centers the 4 text pillars in the "What We Do" section */
+            .service-quadrant {
                 display: flex !important;
                 flex-direction: column !important;
                 align-items: center !important;
-                justify-content: center !important;
                 text-align: center !important;
-                padding: 2em 1em;
+                padding: 1em !important;
             }
-            .centered-quadrant img, .centered-quadrant .icon {
-                margin-bottom: 1em;
-                display: block;
-            }
-            .centered-quadrant p {
+            .service-quadrant p {
                 margin: 0 auto;
-                max-width: 90%;
+                max-width: 95%;
+            }
+
+            /* Safe inner wrapper to center "Our Process" without breaking the crossbar */
+            .process-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+                width: 100%;
+            }
+            .process-inner h3 {
+                margin-top: 1em;
             }
         </style>
 	</head>
@@ -61,19 +70,19 @@
 						<p>The OK Network works closely with clients to accelerate success through modern, resilient technology. Our "roll-up the sleeves" methodology focuses on four core pillars to deliver measurable, secure, and scalable results:</p>
 					
 						<div class="row" style="margin-top: 2em;">
-							<div class="6u 12u$(medium) centered-quadrant">
+							<div class="6u 12u$(medium) service-quadrant">
 								<h3>Artificial Intelligence</h3>
 								<p>Accelerate your business with AI readiness assessments, LLM integration, predictive analytics, and automated workflows to drive unprecedented operational efficiency.</p>
 							</div>
-							<div class="6u$ 12u$(medium) centered-quadrant">
+							<div class="6u$ 12u$(medium) service-quadrant">
 								<h3>Cybersecurity</h3>
 								<p>Protect your critical assets with modern defense strategies. We specialize in Zero-Trust architecture, DevSecOps, threat hunting, and ransomware resilience.</p>
 							</div>
-							<div class="6u 12u$(medium) centered-quadrant">
+							<div class="6u 12u$(medium) service-quadrant">
 								<h3>Compliance</h3>
 								<p>Navigate complex regulatory landscapes with ease. We help architect and maintain systems that support strict frameworks like SOC 2, ISO 27001, GDPR, and HIPAA to instantly build trust with your B2B clients.</p>
 							</div>
-							<div class="6u$ 12u$(medium) centered-quadrant">
+							<div class="6u$ 12u$(medium) service-quadrant">
 								<h3>Modern Cloud Operations</h3>
 								<p>Scale confidently with AIOps, high-availability infrastructure, infrastructure-as-code, and orchestration (Docker/Kubernetes) deployed securely across hybrid and multi-cloud environments.</p>
 							</div>
@@ -91,22 +100,31 @@
 							<h2>Our Process</h2>
 						</header>
 						<p>We start by performing a comprehensive assessment of your AI readiness, security vulnerabilities, and compliance gaps. We detail our findings in an actionable report, and then our cross-industry experts work with you to systematically transform your business.</p>
-						<ul class="icons-grid">
-							<li class="centered-quadrant">
-								<span class="icon major fa-search"></span>
-								<h3>Assess &amp; Audit</h3>
+						
+                        <ul class="icons-grid">
+							<li>
+                                <div class="process-inner">
+								    <span class="icon major fa-search"></span>
+								    <h3>Assess &amp; Audit</h3>
+                                </div>
 							</li>
-							<li class="centered-quadrant">
-								<span class="icon major fa-sitemap"></span>
-								<h3>Architect &amp; Design</h3>
+							<li>
+                                <div class="process-inner">
+								    <span class="icon major fa-sitemap"></span>
+								    <h3>Architect &amp; Design</h3>
+                                </div>
 							</li>
-							<li class="centered-quadrant">
-								<span class="icon major fa-cogs"></span>
-								<h3>Implement &amp; Automate</h3>
+							<li>
+                                <div class="process-inner">
+								    <span class="icon major fa-cogs"></span>
+								    <h3>Implement &amp; Automate</h3>
+                                </div>
 							</li>
-							<li class="centered-quadrant">
-								<span class="icon major fa-shield"></span>
-								<h3>Govern &amp; Scale</h3>
+							<li>
+                                <div class="process-inner">
+								    <span class="icon major fa-shield"></span>
+								    <h3>Govern &amp; Scale</h3>
+                                </div>
 							</li>
 						</ul>
 					</div>
