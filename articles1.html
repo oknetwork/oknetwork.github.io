@@ -10,8 +10,6 @@
         <style>
             /* Custom styling for the hardcoded article list with images */
             .article-list { text-align: left; margin: 0 auto; max-width: 1000px; }
-            
-            /* Flexbox layout to put image on left and text on right */
             .article-item { 
                 margin-bottom: 3em; 
                 padding-bottom: 3em; 
@@ -21,39 +19,18 @@
                 align-items: flex-start;
             }
             .article-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-            
-            /* Image styling */
-            .article-image {
-                flex: 0 0 35%; 
-                max-width: 350px;
-            }
-            .article-image img {
-                width: 100%;
-                border-radius: 6px;
-                display: block;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-
-            /* Text content styling */
-            .article-content {
-                flex: 1; 
-            }
+            .article-image { flex: 0 0 35%; max-width: 350px; }
+            .article-image img { width: 100%; border-radius: 6px; display: block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+            .article-content { flex: 1; }
             .article-title { margin-bottom: 0.25em; margin-top: 0; }
             .article-title a { text-decoration: none; border-bottom: none; color: inherit; transition: color 0.2s ease-in-out; }
             .article-title a:hover { color: #007bff; }
             .article-meta { font-size: 0.9em; color: #888; margin-bottom: 1.5em; display: block; font-weight: bold; }
-
-            /* Mobile responsiveness: Stack image on top of text on smaller screens */
+            
+            /* Mobile responsiveness */
             @media screen and (max-width: 736px) {
-                .article-item {
-                    flex-direction: column;
-                    gap: 1.5em;
-                }
-                .article-image {
-                    flex: auto;
-                    max-width: 100%;
-                    width: 100%;
-                }
+                .article-item { flex-direction: column; gap: 1.5em; }
+                .article-image { flex: auto; max-width: 100%; width: 100%; }
             }
         </style>
 	</head>
@@ -61,9 +38,6 @@
 		<div id="header-bar1" class="reveal alt">
 			<nav id="nav1">
 				<ul class="topnav" id="myTopnav" style="margin-bottom: 0;">
-					<li style="-moz-user-select: none; cursor: pointer; white-space: nowrap;" class="submenu opener">
-						<ul style="-moz-user-select: none; display: none; position: absolute;"></ul>
-					</li>
 					<li style="white-space: nowrap;"><a href="articles1.html" style="font-weight: 900;">Articles</a></li>
 					<li style="white-space: nowrap;"><a href="index.html" style="font-weight: 900;">Home</a></li>
 				</ul>
@@ -98,11 +72,11 @@
                                 </span>
                             </div>
                             <div class="article-content">
-							    <h3 class="article-title"><a href="#">The AI-Ready Enterprise: 5 Steps to Safely Integrate LLMs into Your Workflows</a></h3>
+							    <h3 class="article-title"><a href="articles/article-1.html">The AI-Ready Enterprise: 5 Steps to Safely Integrate LLMs into Your Workflows</a></h3>
 							    <span class="article-meta">May 12, 2026 | By The OK Network Team</span>
-							    <p>The rush to adopt Artificial Intelligence has left many enterprises vulnerable. While the operational benefits of Large Language Models (LLMs)—such as automated customer service, rapid data analysis, and code generation—are undeniable, integrating them into proprietary workflows requires strict governance. Learn our 5-step integration pipeline including Data Sanitization, Private Instances, and Role-Based Access Control.</p>
+							    <p>The rush to adopt Artificial Intelligence has left many enterprises vulnerable. While the operational benefits are undeniable, integrating them into proprietary workflows requires strict governance. Learn our 5-step integration pipeline including Data Sanitization and Role-Based Access Control.</p>
 							    <ul class="actions small">
-								    <li><a href="#" class="button special small">Read Full Article</a></li>
+								    <li><a href="articles/article-1.html" class="button special small">Read Full Article</a></li>
 							    </ul>
                             </div>
 						</article>
@@ -114,11 +88,11 @@
                                 </span>
                             </div>
                             <div class="article-content">
-							    <h3 class="article-title"><a href="#">Zero-Trust Architecture Isn't Just a Buzzword: How to Implement It in 2026</a></h3>
+							    <h3 class="article-title"><a href="articles/article-2.html">Zero-Trust Architecture Isn't Just a Buzzword: How to Implement It in 2026</a></h3>
 							    <span class="article-meta">April 28, 2026 | By The OK Network Team</span>
-							    <p>For decades, IT security relied on securing the perimeter. Today, compromised credentials mean attackers can easily bypass the perimeter and move laterally across your systems. Zero-Trust Architecture operates on a simple principle: Never trust, always verify. We break down the required transition from legacy systems to micro-segmentation, Identity and Access Management (IAM), and continuous endpoint monitoring.</p>
+							    <p>For decades, IT security relied on securing the perimeter. Today, compromised credentials mean attackers can easily bypass the perimeter and move laterally across your systems. Zero-Trust Architecture operates on a simple principle: Never trust, always verify.</p>
 							    <ul class="actions small">
-								    <li><a href="#" class="button special small">Read Full Article</a></li>
+								    <li><a href="articles/article-2.html" class="button special small">Read Full Article</a></li>
 							    </ul>
                             </div>
 						</article>
@@ -130,11 +104,11 @@
                                 </span>
                             </div>
                             <div class="article-content">
-							    <h3 class="article-title"><a href="#">SOC 2 Compliance Made Simple: A Roadmap for High-Growth SaaS Companies</a></h3>
+							    <h3 class="article-title"><a href="articles/article-3.html">SOC 2 Compliance Made Simple: A Roadmap for High-Growth SaaS Companies</a></h3>
 							    <span class="article-meta">March 15, 2026 | By The OK Network Team</span>
-							    <p>For B2B SaaS companies, SOC 2 compliance is no longer optional; it is the absolute barrier to entry for closing enterprise deals. However, the path to achieving a SOC 2 Type II report can seem incredibly daunting. The key to accelerating compliance is automation. Discover how to leverage modern compliance platforms and Infrastructure-as-Code (IaC) to continuously monitor controls without burning out your engineering team.</p>
+							    <p>For B2B SaaS companies, SOC 2 compliance is no longer optional; it is the absolute barrier to entry. The key to accelerating compliance is automation. Discover how to leverage modern compliance platforms and Infrastructure-as-Code (IaC) to continuously monitor controls.</p>
 							    <ul class="actions small">
-								    <li><a href="#" class="button special small">Read Full Article</a></li>
+								    <li><a href="articles/article-3.html" class="button special small">Read Full Article</a></li>
 							    </ul>
                             </div>
 						</article>
@@ -146,11 +120,11 @@
                                 </span>
                             </div>
                             <div class="article-content">
-							    <h3 class="article-title"><a href="#">AIOps: How Machine Learning is Replacing Traditional IT Monitoring</a></h3>
+							    <h3 class="article-title"><a href="articles/article-4.html">AIOps: How Machine Learning is Replacing Traditional IT Monitoring</a></h3>
 							    <span class="article-meta">February 02, 2026 | By The OK Network Team</span>
-							    <p>Modern microservice architectures generate millions of logs, metrics, and traces every minute. When a system goes down, traditional monitoring tools flood your engineering team with cascading alerts, causing critical alert fatigue. AIOps solves this by learning the baseline behavior of your infrastructure and correlating cascading alerts into a single, actionable incident before it impacts the end user.</p>
+							    <p>Modern microservice architectures generate millions of logs, causing critical alert fatigue. AIOps solves this by learning the baseline behavior of your infrastructure and correlating cascading alerts into a single, actionable incident before it impacts the end user.</p>
 							    <ul class="actions small">
-								    <li><a href="#" class="button special small">Read Full Article</a></li>
+								    <li><a href="articles/article-4.html" class="button special small">Read Full Article</a></li>
 							    </ul>
                             </div>
 						</article>
@@ -162,11 +136,11 @@
                                 </span>
                             </div>
                             <div class="article-content">
-							    <h3 class="article-title"><a href="#">Defending Against Advanced Persistent Threats (APTs) in Hybrid Clouds</a></h3>
+							    <h3 class="article-title"><a href="articles/article-5.html">Defending Against Advanced Persistent Threats (APTs) in Hybrid Clouds</a></h3>
 							    <span class="article-meta">January 18, 2026 | Threat Intel</span>
-							    <p>As organizations continue to straddle the line between on-premise data centers and public cloud infrastructure, visibility into malicious activity often becomes fragmented. Advanced Persistent Threats (APTs) exploit these blind spots to maintain long-term access. This article reviews modern Threat Hunting techniques and centralized SIEM solutions to unify security across complex, hybrid IT environments.</p>
+							    <p>Advanced Persistent Threats (APTs) exploit blind spots in hybrid environments to maintain long-term access. This article reviews modern Threat Hunting techniques and centralized SIEM solutions to unify security across complex, hybrid IT environments.</p>
 							    <ul class="actions small">
-								    <li><a href="#" class="button special small">Read Full Article</a></li>
+								    <li><a href="articles/article-5.html" class="button special small">Read Full Article</a></li>
 							    </ul>
                             </div>
 						</article>
@@ -178,11 +152,11 @@
                                 </span>
                             </div>
                             <div class="article-content">
-							    <h3 class="article-title"><a href="#">The Future of Telecommunications: Securing High-Volume Infrastructure</a></h3>
+							    <h3 class="article-title"><a href="articles/article-6.html">The Future of Telecommunications: Securing High-Volume Infrastructure</a></h3>
 							    <span class="article-meta">December 05, 2025 | Industry Operations</span>
-							    <p>ISPs and Telecom providers are facing unprecedented demands on their infrastructure. Ensuring high-availability while simultaneously protecting against massive DDoS attacks requires an evolution in network topology. We examine the latest strategies in deploying automated failovers, scalable load balancing, and DDoS scrubbing protocols tailored for tier-1 network providers.</p>
+							    <p>Ensuring high-availability while simultaneously protecting against massive DDoS attacks requires an evolution in network topology. We examine the latest strategies in deploying automated failovers and scalable load balancing for tier-1 network providers.</p>
 							    <ul class="actions small">
-								    <li><a href="#" class="button special small">Read Full Article</a></li>
+								    <li><a href="articles/article-6.html" class="button special small">Read Full Article</a></li>
 							    </ul>
                             </div>
 						</article>
